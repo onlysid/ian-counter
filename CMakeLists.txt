@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.30)
 project(ian_counter LANGUAGES CXX)
 
 # Require C++17 for std::filesystem, set to c++20

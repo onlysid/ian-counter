@@ -2,7 +2,7 @@
 # This also means a smaller attack surface and better cache efficiency
 
 # ─── Stage 1: Build ───────────────────────────────────────────────────────────
-FROM alpine:3.18 AS build
+FROM alpine:3.21 AS build
 
 # Install build tools and CMake
 RUN apk update \
@@ -10,7 +10,7 @@ RUN apk update \
      # Pull in gcc,g++,make
       build-base      \
       # Build tool
-      cmake>=3.27     \
+      cmake>=3.30     \
       # Faster than GNU Make! (tool to compile/link)
       ninja           \
       # Lightweight C standard library used by Alpine
@@ -35,7 +35,7 @@ RUN mkdir build \
  && ninja
 
 # ─── Stage 2: Runtime ─────────────────────────────────────────────────────────
-FROM alpine:3.18
+FROM alpine:3.21
 
 # Install the C++ runtime libraries our binary needs
 RUN apk add --no-cache \
