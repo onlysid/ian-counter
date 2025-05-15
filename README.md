@@ -13,5 +13,3 @@ docker build -t ian-counter .
 docker run --rm -v "<YOUR_CSV_DIRECTORY>" ian-counter /data
 
 ALTERNATIVELY, use the bash script (sh run.sh "<YOUR_CSV_DIRECTORY>").
-
-where your file path is the path of the directory containing all the CSV files.
