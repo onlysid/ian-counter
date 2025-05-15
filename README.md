@@ -1,4 +1,4 @@
-# Simple 'ian' counter
+# Simple 'ian' counter in c++
 Loops through a group of CSVs and looks for the word 'ian'.
 
 ## Architecture
