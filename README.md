@@ -4,7 +4,7 @@ Loops through a group of CSVs and looks for the word 'ian'.
 ## Architecture
 Docker container running Alipine Linux and a c++ application.
 
-## How to run
+## How to run (docker)
 
 1. Build the image:
 docker build -t ian-counter .
@@ -13,3 +13,7 @@ docker build -t ian-counter .
 docker run --rm -v "<YOUR_CSV_DIRECTORY>" ian-counter /data
 
 ALTERNATIVELY, use the bash script (sh run.sh "<YOUR_CSV_DIRECTORY>").
+
+## How to run (without docker)
+
+Use cmake, cmake --build . (or, cmake with Ninja using -G Ninja). Add -DCMAKE_BUILD_TYPE=Release for optimisations
