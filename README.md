@@ -10,6 +10,8 @@ Docker container running Alipine Linux and a c++ application.
 docker build -t ian-counter .
 
 2. Run the image:
-docker run --rm -v "<YOUR_FILE_PATH>" ian-counter /data
+docker run --rm -v "<YOUR_CSV_DIRECTORY>" ian-counter /data
+
+ALTERNATIVELY, use the bash script (sh run.sh "<YOUR_CSV_DIRECTORY>").
 
 where your file path is the path of the directory containing all the CSV files.
